@@ -10,7 +10,7 @@
  */
 namespace MichStarter\Mich;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme', 15 );
 /**
  * Setup child theme.
  *
@@ -19,21 +19,13 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme' );
  * @return void
  */
 function setup_child_theme() {
+	adds_theme_supports();
+	unregister_layouts();
+
+	add_filter( 'edit_post_link', '__return_empty_string' );
+
 	unregister_genesis_callbacks();
 
-	adds_theme_supports();
-	adds_new_image_sizes();
-}
-
-/**
- * Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function unregister_genesis_callbacks() {
-	unregister_menu_callbacks();
 }
 
 /**
@@ -61,16 +53,9 @@ function adds_theme_supports() {
 			'skip-links'
 		),
 		'genesis-responsive-viewport'     => null,
-		'custom-header'                   => array(
-			'width'           => 600,
-			'height'          => 160,
-			'header-selector' => '.site-title a',
-			'header-text'     => false,
-			'flex-height'     => true,
-		),
 		'custom-background'               => null,
 		'genesis-after-entry-widget-area' => null,
-		//'genesis-footer-widgets'          => 3,
+		'genesis-footer-widgets'          => 3,
 		'genesis-menus'                   => array(
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
@@ -83,36 +68,37 @@ function adds_theme_supports() {
 }
 
 /**
- * Adds new image sizes.
+ * Unregister the Genesis Layouts.
  *
  * @since 1.0.0
  *
  * @return void
  */
-function adds_new_image_sizes() {
-	$config = array(
-		'featured-image' => array(
-			'width'  => 720,
-			'height' => 400,
-			'crop'   => true,
-		),
-		'large' => array(
-			'width'  => 500,
-			'height' => 500,
-			'crop'   => true,
-		),
-		'thumb' => array(
-			'width'  => 280,
-			'height' => 280,
-			'crop'   => true,
-		),
+function unregister_layouts() {
+	$layouts = array(
+		'sidebar-content',
+//		'content-sidebar',
+		'content-sidebar-sidebar',
+		'sidebar-content-sidebar',
+		'sidebar-sidebar-content',
 	);
-
-	foreach( $config as $name => $args ) {
-		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
-
-		add_image_size( $name, $args['width'], $args['height'], $crop );
+	foreach( $layouts  as $layout ) {
+		genesis_unregister_layout( $layout );
 	}
+	// temporary fix for Genesis bug 06.22.2016
+	genesis_set_default_layout( 'full-width-content' );
+}
+
+/**
+ * Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function unregister_genesis_callbacks() {
+	Structure\unregister_menu_callbacks();
+	Structure\unregister_sidebar_callbacks();
 }
 
 add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\set_theme_settings_defaults' );
@@ -162,21 +148,49 @@ function get_theme_settings_defaults() {
 	return array(
 		'blog_cat_num'              => 12,
 		'content_archive'           => 'full',
-		'content_archive_limit'     => 0,
+		'content_archive_limit'     => 250,
 		'content_archive_thumbnail' => 0,
 		'posts_nav'                 => 'numeric',
-		'site_layout'               => 'content-sidebar',
+		'site_layout'               => 'full-width-content',
 	);
 }
 
-//add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
+add_filter( 'theme_page_templates', __NAMESPACE__ . '\remove_genesis_page_templates' );
 /**
- * Setup the theme's localization
+ * Remove Genesis Blog page template.
  *
- * @since 2.3.0
+ * @param array $page_templates Existing recognised page templates.
  *
- * @return void
+ * @return array Amended recognised page templates.
  */
-function genesis_sample_localization_setup(){
-	load_child_theme_textdomain( 'genesis-sample', get_stylesheet_directory() . '/languages' );
+function remove_genesis_page_templates( $page_templates ) {
+	unset( $page_templates['page_blog.php'] );
+	unset( $page_templates['page_landing.php'] );
+	unset( $page_templates['page_archive.php'] );
+	return $page_templates;
+}
+
+//* Remove post info
+add_filter( 'genesis_post_info', __NAMESPACE__ . '\mv_post_info_filter' );
+	function mv_post_info_filter() {
+		return;
+}
+
+//* Customize the next page link
+add_filter ( 'genesis_next_link_text', __NAMESPACE__ . '\sp_next_page_link' );
+function sp_next_page_link ( $text ) {
+    return 'Siguiente página &#x000BB;';
+}
+
+//* Customize the previous page link
+add_filter ( 'genesis_prev_link_text', __NAMESPACE__ . '\sp_previous_page_link' );
+function sp_previous_page_link ( $text ) {
+    return '&#x000AB; Página anterior';
+}
+
+//* Change the footer text */
+add_filter('genesis_footer_creds_text', __NAMESPACE__ . '\custom_footer_creds_filter');
+function custom_footer_creds_filter( $creds ) {
+			$creds = 'Copyright [footer_copyright] <a href="'.get_bloginfo( 'url' ).'">'.get_bloginfo( 'name' ).'</a>.';
+			return $creds;
 }

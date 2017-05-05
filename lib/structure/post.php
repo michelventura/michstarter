@@ -2,13 +2,13 @@
 /**
  * Description
  *
- * @package     MichStarter\Mich
+ * @package     MichStarter\Mich\Structure
  * @since       1.0.0
  * @author      michelventura
  * @link        http://michelventura.com
  * @license     GNU General Public License 2.0+
  */
-namespace MichStarter\Mich;
+namespace MichStarter\Mich\Structure;
 
 /**
  * Unregister post callbacks.
@@ -21,17 +21,11 @@ function unregister_post_callbacks() {
 
 }
 
-add_filter( 'genesis_author_box_gravatar_size', __NAMESPACE__ . '\setup_author_box_gravatar_size' );
-/**
- * Modify size of the Gravatar in the author box.
- *
- * @since 1.0.0
- *
- * @param $size
- *
- * @return int
- */
-function setup_author_box_gravatar_size( $size ) {
-
-	return 90;
+//* Customize the post meta function
+add_filter( 'genesis_post_meta', __NAMESPACE__ . '\custom_post_meta_filter' );
+function custom_post_meta_filter($post_meta) {
+	if ( !is_page() ) {
+		$post_meta = '[post_categories before="Categoria: "]';
+		return $post_meta;
+	}
 }

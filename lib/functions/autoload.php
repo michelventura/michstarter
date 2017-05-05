@@ -19,29 +19,29 @@ namespace MichStarter\Mich;
  */
 function load_nonadmin_files() {
 	$filenames = array(
-		'setup.php',		
-		
+		'setup.php',
+
 		'functions/formatting.php',
 		'functions/load-assets.php',
 		'functions/markup.php',
-		
+
 //		'structure/archive.php',
-		'structure/comments.php',
+//		'structure/comments.php',
 //		'structure/footer.php',
 //		'structure/header.php',
 		'structure/menu.php',
 		'structure/post.php',
-//		'structure/sidebar.php',
-		
-		
-		'components/customizer/css-handler.php',
-		'components/customizer/helpers.php',
-		'components/customizer/customizer.php',
-		
+		'structure/sidebar.php',
+
+
+//		'components/customizer/css-handler.php',
+//		'components/customizer/helpers.php',
+//		'components/customizer/customizer.php',
+
 		// 2.3.0 new woocommerce module
 		//'components/woocommerce/woocommerce-setup.php',
 		//'components/woocommerce/woocommerce-output.php',
-		//'components/woocommerce/woocommerce-notice.php',		
+		//'components/woocommerce/woocommerce-notice.php',
 	);
 
 	load_specified_files( $filenames );

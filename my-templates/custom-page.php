@@ -3,7 +3,6 @@
  * Template Name: Custom
  * Template Post Type: page
  */
-wp_enqueue_style( 'custom-styles', CHILD_URL . '/custom.css', array(), CHILD_THEME_VERSION );
 add_filter( 'body_class', 'custom_genesis_page_body_class' );
 /**
  * Adds a css class to the body element
