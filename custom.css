@@ -1,0 +1,44 @@
+/* Custom Page Styles */
+
+.mv-custom,
+.mv-custom .site-container,
+.mv-custom .site-container .site-inner {
+    max-width: 100%;
+    width: 100%;
+    background: 0 0;
+    border: 0;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none
+}
+
+.mv-custom .center-block {
+    margin: 0 auto
+}
+
+.mv-custom .center-text {
+    text-align: center
+}
+
+.clearfix:after,
+.mv-custom .clearfix:before {
+    content: "\0020";
+    display: table
+}
+
+.mv-custom .clearfix:after {
+    clear: both
+}
+
+@media screen and (max-width:500px) {
+    .mv-custom .fl-row-bg-video video {
+        left: 0!important
+    }
+    .mv-custom .fl-row-bg-video {
+        min-width: 360px
+    }
+}
