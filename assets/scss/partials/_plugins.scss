@@ -1,0 +1,37 @@
+/*======================================
+=            Common Plugins            =
+======================================*/
+
+
+/*----------  Jetpack  ----------*/
+
+#wpstats {
+    display: none;
+}
+
+
+/*----------  Genesis eNews Widget  ----------*/
+
+.enews input {
+    margin-bottom: 20px;
+}
+
+
+/*----------  SuperSide Me  ----------*/
+
+.site-header>.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-area {
+    order: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-self: center;
+}
+
+.slide-nav-link {
+    order: 2;
+    align-self: center;
+}
