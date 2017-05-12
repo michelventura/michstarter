@@ -11,11 +11,16 @@
 }
 
 .site-inner,
-.wrap,
-.site-footer {
+.wrap {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
+}
+
+.site-footer {
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #eef2f2;
 }
 
 .site-inner {
@@ -26,7 +31,7 @@
 /*----------  Site Header  ----------*/
 
 .site-header {
-	background: #fff;
+	background: #eef2f2;
 	border-bottom: 1px solid $colorLight;
 	width: 100%;
 	min-height: 93px;

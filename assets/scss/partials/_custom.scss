@@ -1,0 +1,58 @@
+/*================================
+=            Custom              =
+================================*/
+
+.home-content {
+  background-color: #fff;
+  color: #222;
+}
+
+.why {
+  margin: 0;
+  padding: 40px;
+  font-size: 34px;
+  text-align: center;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 80px 20px;
+}
+
+.how {
+  font-size: 26px;
+  text-align: center;
+}
+
+.what {
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.comienza{
+  padding: 40px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.site-footer .wrap {
+ // padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#genesis-footer-widgets{
+  margin-top: -32px;
+}
+
+.footer-widgets,
+.footer-widgets a,
+.widgettitle {
+  background: #334345;
+  color: #fff;
+}

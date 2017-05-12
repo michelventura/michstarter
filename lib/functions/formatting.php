@@ -9,3 +9,6 @@
  * @license     GNU General Public License 2.0+
  */
 namespace MichStarter\Mich;
+
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );

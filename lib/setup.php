@@ -194,3 +194,21 @@ function custom_footer_creds_filter( $creds ) {
 			$creds = 'Copyright [footer_copyright] <a href="'.get_bloginfo( 'url' ).'">'.get_bloginfo( 'name' ).'</a>.';
 			return $creds;
 }
+
+//* Modify breadcrumb arguments.
+add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\mv_breadcrumb_args' );
+function mv_breadcrumb_args( $args ) {
+	$args['home'] = 'Inicio';
+	$args['sep'] = '&nbsp;  &raquo; &nbsp;';
+	$args['labels']['prefix'] = 'Estas aquí: &nbsp;';
+return $args;
+}
+
+//* Add Genesis Attribute to add Angular routes and controllers
+add_filter( 'genesis_attr_body', __NAMESPACE__ . '\add_ng_app_to_body' );
+function add_ng_app_to_body( $attributes ) {
+	if ( is_page( 'contacto' ) ) {
+   $attributes['ng-app'] = 'mvApp';
+  }
+   return $attributes;
+}
