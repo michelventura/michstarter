@@ -46,7 +46,7 @@
 }
 
 
-#genesis-footer-widgets{
+.home #genesis-footer-widgets{
   margin-top: -32px;
 }
 
@@ -55,4 +55,25 @@
 .widgettitle {
   background: #334345;
   color: #fff;
+}
+
+.archive-description{
+  background-color: #ababab;
+  border: none;
+  text-align: center;
+}
+
+.archive .site-inner {
+	padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+h1.archive-title{
+  padding: 40px 0;
+}
+
+article.entry{
+  margin: 20px;
+  padding: 20px 40px;
 }
