@@ -22,7 +22,7 @@ add_action('wp_enqueue_scripts', 'home_wow_init_in_footer');
 
 function mv_front_page() {
   mv_genesis_header();
-  echo '<section class="home-content">';
+  echo '<section class="home-content wow fadeIn">';
   the_post();
   the_content();
   echo '</section>';
