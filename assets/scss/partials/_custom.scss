@@ -16,9 +16,9 @@
 
 .enlaces {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0 80px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .how {
