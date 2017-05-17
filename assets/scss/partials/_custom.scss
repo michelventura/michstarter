@@ -3,83 +3,92 @@
 ================================*/
 
 .home-content {
-  background-color: #fff;
-  color: #222;
+    background-color: #fff;
+    color: #222;
 }
 
 .why {
-  margin: 0;
-  padding: 40px;
-  font-size: 34px;
-  text-align: center;
+    margin: 0;
+    padding: 40px;
+    font-size: 34px;
+    text-align: center;
 }
 
 .enlaces {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 80px 20px;
 }
 
 .how {
-  font-size: 26px;
-  text-align: center;
+    font-size: 26px;
+    text-align: center;
 }
 
 .what {
-  padding: 20px;
-  font-size: 22px;
-  text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
 }
 
-.comienza{
-  padding: 40px 20px 80px;
-  text-align: center;
-  font-size: 24px;
+.comienza {
+    padding: 40px 20px 80px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .site-footer .wrap {
- // padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    // padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.home #genesis-footer-widgets{
-  margin-top: -32px;
+.home #genesis-footer-widgets {
+    margin-top: -32px;
 }
 
 .footer-widgets,
 .footer-widgets a,
 .widgettitle {
-  background: #334345;
-  color: #fff;
+    background: #334345;
+    color: #fff;
 }
 
-.archive-description{
-  background-color: #ababab;
-  border: none;
-  text-align: center;
+.archive-description {
+    background-color: #ababab;
+    border: none;
+    text-align: center;
 }
 
 .archive .site-inner {
-	padding: 0;
-  margin: 0;
-  max-width: none;
+    padding: 0;
+    margin: 0;
+    max-width: none;
 }
 
-h1.archive-title{
-  padding: 40px 0;
+h1.archive-title {
+    padding: 40px 0;
 }
 
-article.entry{
-  margin: 20px;
-  padding: 20px 40px;
+article.entry {
+    margin: 20px;
+    padding: 20px 40px;
 }
 
 .breadcrumb {
-  font-size: 16px;
-  margin: 0 30px -5px;
-  color: #001f3f;
+    font-size: 16px;
+    margin: 0 30px -5px;
+    color: #001f3f;
+}
+
+.blog .site-inner {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+
+.blog .breadcrumb {
+    display: none;
 }
