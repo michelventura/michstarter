@@ -3,15 +3,15 @@
 ================================*/
 
 .home-content {
-    color: #222;
     background-color: #fff;
+    color: #222;
 }
 
 .why {
     margin: 0;
     padding: 40px;
-    text-align: center;
     font-size: 34px;
+    text-align: center;
 }
 
 .enlaces {
@@ -22,14 +22,14 @@
 }
 
 .how {
-    text-align: center;
     font-size: 26px;
+    text-align: center;
 }
 
 .what {
     padding: 20px;
-    text-align: center;
     font-size: 22px;
+    text-align: center;
 }
 
 .comienza {
@@ -41,22 +41,22 @@
 .cta-principal {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .cta-btn {
-    padding: 12px;
     border: 1px solid #222;
     font-size: 1.1em;
+    padding: 12px;
 }
 
 .cta-btn:hover {
+    background-color: #bc2143;
+    color: white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    color: white;
     border-bottom: 1.1px solid black;
-    background-color: #3D6DB5;
 }
 
 .site-footer .wrap {
@@ -67,27 +67,63 @@
 }
 
 .home #genesis-footer-widgets {
-    margin-top: 0;
+    margin-top: -32px;
 }
 
 .footer-widgets,
 .footer-widgets a,
 .widgettitle {
-    color: #fff;
     background: #334345;
+    color: #fff;
+}
+
+li.cat-item a {
+    background-color: #bc2143;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    border-bottom: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.footer-widgets-2 ul li,
+.footer-widgets-3 ul li {
+    list-style-type: none;
+}
+
+.widget-title {
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
+#text-3 ul li a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: raw;
+    justify-content: flex-start;
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+#text-3 span {
+    font-size: 42px;
+    margin: -5px 30px 2px 0;
 }
 
 .archive-description {
-    text-align: center;
-    border: none;
     background-color: #ababab;
+    border: none;
+    text-align: center;
 }
 
-.blog .site-inner,
 .archive .site-inner {
-    max-width: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    max-width: none;
 }
 
 h1.archive-title {
@@ -100,9 +136,15 @@ article.entry {
 }
 
 .breadcrumb {
+    font-size: 16px;
     margin: 0 30px -5px;
     color: #001f3f;
-    font-size: 16px;
+}
+
+.blog .site-inner {
+    padding: 0;
+    margin: 0;
+    max-width: none;
 }
 
 .blog .breadcrumb {
