@@ -150,3 +150,104 @@ article.entry {
 .blog .breadcrumb {
     display: none;
 }
+
+/*================================
+=       Contact Page             =
+================================*/
+
+.page-id-2175 fieldset {
+    border: none;
+}
+.page-id-2175 .entry-content {
+    margin-top: -30px;
+}
+@media screen and (min-width: 1200px) {
+    .page-id-2175 #frm_form_5_container {
+        margin-top: -40px;
+    }
+}
+#frm_field_64_container,
+#frm_field_65_container,
+#frm_field_66_container,
+#frm_field_67_container,
+#frm_field_68_container,
+#frm_field_69_container,
+#frm_field_70_container {
+    margin-bottom: 12px;
+}
+#frm_field_71_container {
+    margin: 20px 0;
+}
+button.frm_button_submit {
+    border-color: #bc2143;
+    background: #bc2143;
+    box-shadow: 4px 4px 5px #888888;
+}
+button.frm_button_submit:hover {
+    background-color: #fff;
+    color: #bc2143;
+    box-shadow: none;
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+label[for="field_nrg9f"],
+label[for="field_29yf4d2"],
+label[for="field_itt5me2"],
+label[for="field_d3n7i"],
+label[for="field_xnamq"] {
+    display: none;
+}
+textarea,
+select,
+input {
+    border-radius: 0;
+    text-align: left;
+    border-color: #cccccc;
+    color: #333333;
+    border-width: 1px;
+}
+.disponibilidad-intro,
+.footer-contact p.disponibilidad-intro {
+    font-size: 24px;
+    margin: 0;
+}
+.disponibilidad {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 25px;
+}
+.disponibilidad .fecha {
+    margin: -18px 0 0 70px;
+    padding-bottom: 16px;
+}
+.disponibilidad .dashicons {
+    color: #4f5360;
+    font-size: 54px;
+}
+.disponibilidad .label {
+    color: #4f5360;
+    font-size: 16px;
+}
+@media screen and (max-width: 540px) {
+    .breadcrumb {
+        padding-top: 20px;
+    }
+    .site-container .site-inner,
+    .entry-content {
+        padding: 0;
+        margin: 0 -10px;
+    }
+}
+legend {
+    display: none;
+}
+.frm_error_style {
+    color: red;
+}
+.frm_error {
+    color: red;
+    font-size: 14px;
+}

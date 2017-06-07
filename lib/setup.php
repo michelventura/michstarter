@@ -204,11 +204,10 @@ function mv_breadcrumb_args( $args ) {
 return $args;
 }
 
-//* Add Genesis Attribute to add Angular routes and controllers
-add_filter( 'genesis_attr_body', __NAMESPACE__ . '\add_ng_app_to_body' );
-function add_ng_app_to_body( $attributes ) {
-	if ( is_page( 'contacto' ) ) {
-   $attributes['ng-app'] = 'mvApp';
+//* Remove Contact Page title
+add_action( 'get_header', __NAMESPACE__ . '\remove_contact_page_title' );
+function remove_contact_page_title() {
+        if ( is_page( 'contacto' ) ) {
+           remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
   }
-   return $attributes;
 }
