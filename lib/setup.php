@@ -204,10 +204,10 @@ function mv_breadcrumb_args( $args ) {
 return $args;
 }
 
-//* Remove Contact Page title
-add_action( 'get_header', __NAMESPACE__ . '\remove_contact_page_title' );
-function remove_contact_page_title() {
-        if ( is_page( 'contacto' ) ) {
-           remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-  }
+//* Remove Page titles from pages
+add_action( 'get_header', __NAMESPACE__ . '\remove_titles_from_pages' );
+function remove_titles_from_pages() {
+    if ( is_page ( array( contacto, portafolio ) ) ) {
+        remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+    }
 }
