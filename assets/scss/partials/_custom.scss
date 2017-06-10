@@ -165,10 +165,12 @@ article.entry {
 =       Contact Page             =
 ================================*/
 
-.page-id-2175 fieldset {
+.page-id-2175 fieldset,
+.page-id-2205 fieldset {
     border: none;
 }
 
+.page-id-2205 #frm_form_5_container,
 .page-id-2175 .entry-content {
     margin-top: -30px;
 }
@@ -261,8 +263,8 @@ input {
     }
     .site-container .site-inner,
     .entry-content {
-        padding: 0;
-        margin: 0 -10px;
+        padding: 0 33px;
+        margin: 10px -10px 40px;
     }
 }
 
@@ -277,4 +279,55 @@ legend {
 .frm_error {
     color: red;
     font-size: 14px;
+}
+
+
+/*================================
+=       Portafolio Page          =
+================================*/
+
+.portafolio-heading,
+.portafolio-heading h1 {
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #334345;
+    color: #f2f2f2;
+}
+
+.portafolio-heading a {
+    color: #f2f2f2;
+}
+
+.portafolio-heading p {
+    margin: 20px 60px;
+    text-align: center;
+    font-size: 1.15em;
+}
+
+@media screen and (max-width: 768px) {
+    .portafolio-heading p {
+        margin: 5px;
+    }
+}
+
+.intro {
+    margin-top: 40px;
+}
+
+hr {
+    margin: 80px 0;
+}
+
+.cta-custom-content>.one-half {
+    border: 1px solid red;
+}
+
+.intro {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #999;
 }
