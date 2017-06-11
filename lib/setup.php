@@ -211,3 +211,11 @@ function remove_titles_from_pages() {
         remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
     }
 }
+
+// Edit the read more link text
+add_filter('get_the_content_more_link', __NAMESPACE__ . '\custom_read_more_link');
+add_filter('the_content_more_link', __NAMESPACE__ . '\custom_read_more_link');
+
+function custom_read_more_link() {
+	return '&nbsp;<a class="more-link" href="' . get_permalink() . '" rel="nofollow">Leer más &raquo;</a>';
+}
