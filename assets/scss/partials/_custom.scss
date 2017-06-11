@@ -166,11 +166,11 @@ article.entry {
 ================================*/
 
 .page-id-2175 fieldset,
-.page-id-2205 fieldset {
+.page-id-2209 fieldset {
     border: none;
 }
 
-.page-id-2205 #frm_form_5_container,
+.page-id-2209 #frm_form_5_container,
 .page-id-2175 .entry-content {
     margin-top: -30px;
 }
@@ -265,6 +265,15 @@ input {
     .entry-content {
         padding: 0 33px;
         margin: 10px -10px 40px;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .page-id-2175 .site-container .site-inner,
+    .page-id-2175 .entry-content {
+   	 padding: 0;
+   	 margin: 0 -10px;
     }
 }
 
