@@ -10,10 +10,10 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 //* Add Featured Image on single portafolio
-add_action( 'portafolio_feat_img', 'display_feat_img' );
-function display_feat_img() {
-        echo '<div class="feat-img">';
-    	echo "<p>Hola Carola</p>";
+add_action( 'portafolio_feature', 'display_feature' );
+function display_feature() {
+        echo '<div class="portafolio-feature">';
+    	genesis_do_post_title();
         echo '</div>';    
 }
 
@@ -23,11 +23,9 @@ function portafolio_child_page(){
     the_content();
 }
 
-add_action('paginacion', 'before_cta_quote');
-function before_cta_quote(){
-    echo '<div class="paginacion-nav">';
-	echo "Paginacion";
-    echo '</div>';
+add_action('pagination', 'pagination_after_content');
+function pagination_after_content(){
+    echo '<div class="nav-pagination"></div>';
 }
 
 add_action('before_cta_quote', 'before_cta_content');
@@ -49,9 +47,9 @@ function after_cta_content(){
 
 // Build the page
 get_header();
-do_action('portafolio_feat_img');
+do_action('portafolio_feature');
 do_action('portafolio_child_content');
-do_action('paginacion');
+do_action('pagination');
 do_action('before_cta_quote');
 do_action('cta_quote');
 do_action('after_cta_quote');

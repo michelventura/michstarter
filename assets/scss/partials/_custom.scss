@@ -342,9 +342,27 @@ hr {
     border-bottom: 1px solid #999;
 }
 
+.portafolio-feature {
+    padding: 90px;
+    background-color: #6272A4;
+}
+
+.portafolio-feature h1 {
+    margin-top: 20px;
+    font-size: 42px;
+    color: white;
+    text-align: center;
+}
+
 .distintivo {
     display: flex;
     margin-bottom: 120px;
+}
+
+@media screen and (min-width: 1140px) {
+    .distintivo:first-child {
+        margin-top: 60px;
+    }
 }
 
 .page-child h2 {
@@ -373,6 +391,10 @@ hr {
         margin: 0 auto;
         max-width: none;
     }
+}
+
+.nav-pagination {
+    border-bottom: 1px solid #999;
 }
 
 .distintivos,
