@@ -258,21 +258,18 @@ input {
 }
 
 @media screen and (max-width:540px) {
-
     .breadcrumb {
         padding-top: 20px;
     }
-
     .site-container .site-inner,
     .page .entry-content,
     .post .entry-content {
-         padding: 0;
-         margin: 0 -10px;
+        padding: 0;
+        margin: 0 -10px;
     }
 }
 
 @media screen and (max-width: 540px) {
-
     .page-id-2209 .site-container .site-inner,
     .page-id-2209 .entry-content {
         padding: 0 33px;
@@ -342,4 +339,42 @@ hr {
 .intro {
     padding-bottom: 40px;
     border-bottom: 1px solid #999;
+}
+
+.page-child .breadcrumb,
+.page-child .entry-header {
+    display: none;
+}
+
+.distintivo {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.distintino-titulo {
+    font-size: 28px;
+}
+
+.impar .distintivo-copy {
+    margin-left: 60px;
+}
+
+.impar {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1140px) {
+    .distintivo {
+        display: flex;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+    .impar .distintivo-copy,
+    .distintivo-copy,
+    .distintivo-img,
+    .impar .distintivo-img {
+        margin: 0 auto;
+        max-width: none;
+    }
 }
