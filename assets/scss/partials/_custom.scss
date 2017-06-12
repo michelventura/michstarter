@@ -165,6 +165,7 @@ article.entry {
 =       Contact Page             =
 ================================*/
 
+.page-child fieldset,
 .page-id-2175 fieldset,
 .page-id-2209 fieldset {
     border: none;
@@ -341,18 +342,13 @@ hr {
     border-bottom: 1px solid #999;
 }
 
-.page-child .breadcrumb,
-.page-child .entry-header {
-    display: none;
-}
-
 .distintivo {
     display: flex;
     margin-bottom: 120px;
 }
 
-.distintino-titulo {
-    font-size: 28px;
+.page-child h2 {
+    font-size: 26px;
 }
 
 .impar .distintivo-copy {
@@ -376,5 +372,22 @@ hr {
     .impar .distintivo-img {
         margin: 0 auto;
         max-width: none;
+    }
+}
+
+.distintivos,
+.cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-child .frm_submit {
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+    .distintivos,
+    .cta-content {
+        padding: 30px;
     }
 }
