@@ -232,6 +232,20 @@ input {
     border-width: 1px;
 }
 
+input[type="text"]#field_nrg9f::-webkit-input-placeholder,
+input[type="email"]#field_29yf4d2::-webkit-input-placeholder,
+input[type="tel"]#field_xnamq::-webkit-input-placeholder,
+input[type="url"]#field_itt5me2::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #888888;
+}
+
+#field_tzg4c,
+#field_al20,
+#field_3ev9s {
+    color: #444444;
+}
+
 .disponibilidad-intro,
 .footer-contact p.disponibilidad-intro {
     font-size: 24px;
