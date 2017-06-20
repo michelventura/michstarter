@@ -168,6 +168,16 @@ article.entry {
     padding: 0 40px;
 }
 
+.video-tutorial {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .video-tutorial {
+        padding: 40px;
+    }
+}
+
 ul.no-bullet li {
     list-style-type: none;
 }
