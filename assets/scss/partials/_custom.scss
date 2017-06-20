@@ -423,6 +423,20 @@ legend {
     margin-bottom: 10px;
 }
 
+@media all and (max-width: 600px) {
+    .testimonio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonio-content {
+        padding-top: 30px;
+    }
+    .testimonio-lau .testimonio-content h3 {
+        margin-top: 5px;
+    }
+}
+
 
 /*================================
 =       Portafolio Page          =
