@@ -222,12 +222,14 @@ ul.no-bullet li {
     margin: 20px 0;
 }
 
+#submit,
 button.frm_button_submit {
     border-color: #bc2143;
     background: #bc2143;
     box-shadow: 4px 4px 5px #888888;
 }
 
+#submit:hover,
 button.frm_button_submit:hover {
     background-color: #fff;
     color: #bc2143;
