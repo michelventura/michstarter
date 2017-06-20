@@ -362,6 +362,61 @@ legend {
 
 
 /*================================
+=       Testimonios Page         =
+================================*/
+
+.testimonio {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.testimonio a {
+    border-bottom: none;
+}
+
+.testimonio img {
+    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, .4);
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, .4);
+    margin-bottom: 40px;
+    border-radius: 50%;
+}
+
+.testimonio img.alignleft {
+    margin: 0 40px 0 0;
+}
+
+.testimonio img.alignright {
+    margin: 0 0 0 40px;
+}
+
+.testimonio h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.testimonio-gaby .testimonio-content h3,
+.testimonio-gaby .testimonio-content a {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.testimonio-lau .testimonio-content h3 {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.testimonio-content {
+    padding-top: 20px;
+}
+
+
+/*================================
 =       Portafolio Page          =
 ================================*/
 
