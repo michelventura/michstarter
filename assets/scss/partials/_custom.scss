@@ -149,6 +149,11 @@ article.entry {
     color: #001f3f;
 }
 
+
+/*================================
+=       Post Page                =
+================================*/
+
 .blog .site-inner {
     padding: 0;
     margin: 0;
@@ -161,6 +166,14 @@ article.entry {
 
 #respond {
     padding: 0 40px;
+}
+
+ul.no-bullet li {
+    list-style-type: none;
+}
+
+.lista-num {
+    font-size: 26px;
 }
 
 
