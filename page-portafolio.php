@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Front Page
+ * Custom Portafolio Page
  *
  */
 wp_enqueue_style('fadeupstyle', CHILD_URL . '/assets/css/fadeup.css');
