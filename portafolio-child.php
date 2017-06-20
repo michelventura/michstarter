@@ -3,6 +3,8 @@
 * Template Name: Portafolio child
 * Description: Template for single portafolio 
 */
+wp_enqueue_style('fadeupstyle', CHILD_URL . '/assets/css/fadeup.css');
+wp_enqueue_script('fadeup', CHILD_URL . '/assets/js/fadeup.js', array( 'jquery' ) , CHILD_THEME_VERSION, true);
 wp_enqueue_script('portafolio', CHILD_URL . '/assets/js/portafolio.js', array( 'jquery' ) , '', true);
 
 //* Remove breadcrumbs and page title
