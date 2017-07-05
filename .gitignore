@@ -8,6 +8,7 @@ tests/mocks/env/
 .sass-cache/
 
 # Development files
+/.idea
 /.vscode
 /node_modules
 /assets/vendor/
