@@ -171,16 +171,16 @@
                 </div>
                 <!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#" target="_blank">IBCI Coyoacán</a></span> -
+                    <span class="project-title"><a href="http://ibcicoyoacan.com/" target="_blank">IBCI Coyoacán</a></span> -
                     <span class="project-tagline">En este proyecto, el objetivo del cliente fue dar a conocer su nueva oferta académica. Para ejecutar esto, se realizó un rediseño de sitio web para el lanzamiento de su oferta educativa y nuevos cursos.</span>
                 </div>
                 <!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#" target="_blank">Enrico Bompani</a></span> - <span class="project-tagline">Para este proyecto, Enrico me contactó para crear su presencia en línea con la finalidad de posicionarse como autoridad en su nicho. Para esto, colaboramos juntos para crear una página web que mostrará su trabajo y un blog donde el pudiera compartir su conocimiento y una sección de videos donde está creando contenido informativo para su audiencia.</span>
+                    <span class="project-title"><a href="http://enricobompani.com/" target="_blank">Enrico Bompani</a></span> - <span class="project-tagline">Para este proyecto, Enrico me contactó para crear su presencia en línea con la finalidad de posicionarse como autoridad en su nicho. Para esto, colaboramos juntos para crear una página web que mostrará su trabajo y un blog donde el pudiera compartir su conocimiento y una sección de videos donde está creando contenido informativo para su audiencia.</span>
                 </div>
                 <!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#" target="_blank">Green Energy Development</a></span> - <span class="project-tagline">En este proyecto, desarrollamos un equipo de trabajo para crear una solución optimizada para buscadores para que el cliente pueda de manera sencilla probar distintas versiones (A/B Test) para sus campañas de publicidad pagada así como implementación de SEO técnico para mejorar el quality score y bajar el costo por clic.</span>
+                    <span class="project-title"><a href="http://ged.gs/" target="_blank">Green Energy Development</a></span> - <span class="project-tagline">En este proyecto, desarrollamos un equipo de trabajo para crear una solución optimizada para buscadores para que el cliente pueda de manera sencilla probar distintas versiones (A/B Test) para sus campañas de publicidad pagada así como implementación de SEO técnico para mejorar el quality score y bajar el costo por clic.</span>
                 </div>
                 <!--//item-->
             </section>
